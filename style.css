@@ -1,0 +1,321 @@
+/* body {
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+img { */
+/* TRANSLATE */
+/* transform: translateX(200px); IT IS POSITIVE INTEGER SO ITS GONE ALONG X-AXIS TO THE RIGHT */
+/* transform: translateX(-200px); IT'S GOING TO ZOOM TO LEFT, POSITIVE TO THE RIGHT AND 
+  NEGATIVE TO THE LEFT. */
+/* transform: translateY(200px); NOW IT GOES DOWN 20PX,INSTEAD OF GOING RIGHT. */
+/* transform: translateY(-200px); OHH!!! IT GOES UPWARDS... */
+/* transform: translate(-200px, 240px); SO WE CAN USE BOTH X AND Y VALUES TOGETHER */
+/* SCALE IT MAKES ELEMENTS BIGGER OR SMALLER */
+/* transform: scaleX(3); WE ARE JUST STRETCHING ALONG THE X-AXIS */
+/* transform: scaleY(3); we are just stretching along y-axis */
+/* transform: scale(4, -7); we are using both the axis */
+/* ROTATE */
+/* transform: rotateX(60deg); similarly we could do for y also */
+/* transform: rotateZ(360deg); z axis runs like a 3d pole in and out of the page,it can
+  rotate either clockwise or anti-clockwise use negative values also. */
+/* transform: rotateZ(-90deg) translateY(200px); using it together. */
+/* transform: rotatez(-90deg) translateY(200px) scale(2); so all three together. */
+/* } */
+/* .circle {
+  width: 100px;
+  padding: 60px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: pink;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer; */
+/* transition: 1s; this is for whole */
+/* transition: background 1s, transform 0.3s; we do like this bcoz we need to 
+  apply it to particular property */
+/* transition: background 1s, transform 0.3s 1s; 1s is the delay time... 0.3s is 
+  the transition time... */
+/* transition: background 1s, transform 1s 1s linear; linear means not too fast,
+  not too slow... */
+/* transition: background 1s, transform 1s 1s linear ease-in; ease-in is used for
+  at bstarting its slow,later becomes faster.... */
+/* }
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
+} */
+
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+.mario {
+  position: absolute;
+  top: 280px;
+  left: 0px;
+  /* #10. */
+/* animation: drive 3s both infinite linear, jump 0.3s 1.2s ease-in-out; */
+/* animation-name: drive; */
+/* the name which we have given in keyframes must be given here */
+/* animation-duration: 5s; */
+/* #5.animation-fill mode... */
+/* animation-fill-mode: forwards; */
+/* #5.it stays there only in the forward direction. */
+/* animation-fill-mode: both; */
+/* animation-delay: 3s; */
+/* it delays the time,and later starts it... */
+/* #6.Repeating Animations.. */
+/* animation-iteration-count: 3; */
+/* this is bcoz if we want to repeat mario,so it repetas mario!!! */
+/* animation-iteration-count: infinite; */
+/* so we have given mario as infinite,so it keeps on cycling!!! */
+/* #8.Animation timing functions... */
+/* animation-timing-function: ease-in-out; */
+/* we have many options like linear and all that stuff,we have already done
+  that in transition.... */
+/* animation-timing-function: cubic-bezier(0, 0.77, 1, 0.28); */
+/* animation-timing-function: linear; */
+/* } */
+
+/* #7.Animation direction.. */
+/* .luigi {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 6s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite; */
+/* animation-direction: reverse; */
+/* animation-direction: alternate; */
+/* this makes luigi go from to and to from... */
+/* animation-timing-function: linear; */
+/* } */
+
+/* #9. */
+/* .cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s;
+}
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0;
+  animation: wind 80s linear infinite reverse; */
+
+/* @keyframes drive { */
+/* we need to give a name to keyframes */
+/* from { */
+/* transform: translateX(200px); */
+/* it starts at 200px..but it pops-up..so to remove that we give 
+    animation-fill-mode: both in the .mario; */
+/* #6 */
+/* transform: translateX(-200px); */
+/* this is bcoz it needs to start naturally!!! */
+/* }
+  to {
+    transform: translateX(1400px);
+  }
+} */
+/* @keyframes cloud {
+  from{left:-300px}
+  to{left:100%}
+} */
+/* #10.Chaining animations... */
+/* @keyframes jump {
+  0% {
+    top: 280px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: 280px
+  }
+}  */
+
+/* #11.Animating a pop-up.... */
+/* body {
+  margin: 0;
+  position: relative;
+}
+body.pop-up {
+  background: #222;
+}
+* {
+  font-family: Calibri, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+p {
+  margin-bottom: 40px;
+}
+#pop-up {
+  position: relative;
+  top: 200px;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+#pop-up .container {
+  background: #f0e4d4;
+  padding: 30px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#pop-up input {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+button {
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  background: #333;
+  margin-left: -5px;
+  margin-left: -5px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #333;
+  font-size: 18px;
+}
+.cross {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #555;
+  color: #ddd;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  border-radius: 11px;
+}
+
+#pop-up {
+  top: -400px;
+  animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(700px);
+  }
+  100% {
+    transform: translateY(650px);
+    opacity: 1;
+  }
+} */
+
+/* #12,animating shopping cart.... */
+header {
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+}
+header:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.basket ul {
+  padding: 0;
+  margin-top: 40px;
+}
+.basket li {
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  margin: 30px 1.5%;
+  text-align: center;
+}
+.basket button {
+  border-radius: 10px;
+  cursor: pointer;
+}
+.basket header div {
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+.basket header h1 {
+  float: left;
+}
+.zoom {
+  position: relative;
+  top: 40px;
+  right: 50%;
+  width: 40px;
+  opacity: 0;
+  animation: zoom 1s ease forwards;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: 40px;
+  }
+}
